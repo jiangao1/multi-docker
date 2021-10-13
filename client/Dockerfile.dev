@@ -1,5 +1,5 @@
 FROM node:alpine as builder
-RUN apk add nodejs
+RUN apk add npm
 WORKDIR '/app'
 COPY ./package.json ./
 RUN npm install
