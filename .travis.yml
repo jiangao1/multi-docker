@@ -7,8 +7,8 @@ before_install:
   - docker build -t jiangao1/react-test  -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true jiangao1/react-test
-  #- docker run -e CI=true jiangao1/react-test npm run test
+  # - docker run -e CI=true jiangao1/react-test
+  - docker run -e CI=true jiangao1/react-test npm run test
 
 after_success:
   - docker build -t jiangao1/multi-client ./client
